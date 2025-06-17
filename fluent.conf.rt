@@ -23,7 +23,7 @@
   request_timeout 30s
   # @log_level debug
   # verify_ssl "#{ENV['DATADOG_VERIFY_SSL']}"
-  ddtags ["instance:test-artifactory", "cluster:preprod05"]
+  ddtags ["env:#{ENV['env_label']}", "service:#{ENV['service_label', "version:#{ENV['version_label']]}"]
 </match>
 # CALLHOME
 <source>
